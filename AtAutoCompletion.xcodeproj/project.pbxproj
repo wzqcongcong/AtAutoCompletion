@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84189E0F1AC029B70051B4D9 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84189E0E1AC029B70051B4D9 /* MethodSwizzle.m */; };
 		84D6A39B1ABFBFE200F0CD57 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D6A39A1ABFBFE200F0CD57 /* AppKit.framework */; };
 		84D6A39D1ABFBFE200F0CD57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D6A39C1ABFBFE200F0CD57 /* Foundation.framework */; };
 		84D6A3A21ABFBFE200F0CD57 /* AtAutoCompletion.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 84D6A3A11ABFBFE200F0CD57 /* AtAutoCompletion.xcscheme */; };
@@ -14,13 +15,15 @@
 		84ECAD431AC00725007813F6 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ECAD421AC00725007813F6 /* DVTKit.framework */; };
 		84ECAD451AC00742007813F6 /* DVTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ECAD441AC00742007813F6 /* DVTFoundation.framework */; };
 		84ECAD471AC0074C007813F6 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ECAD461AC0074C007813F6 /* IDEKit.framework */; };
-		84ECAD4C1AC0082C007813F6 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECAD4B1AC0082C007813F6 /* MethodSwizzle.m */; };
 		84ECAD4F1AC00922007813F6 /* DVTSourceTextView+AAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECAD4E1AC00922007813F6 /* DVTSourceTextView+AAC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8436B30B1AC0059E003E0381 /* DVTSourceTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceTextView.h; sourceTree = "<group>"; };
-		84CEEAD51AC00F7400A9273C /* DVTTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextStorage.h; sourceTree = "<group>"; };
+		84189E0D1AC029B70051B4D9 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MethodSwizzle.h; path = AtAutoCompletion/MethodSwizzle.h; sourceTree = "<group>"; };
+		84189E0E1AC029B70051B4D9 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MethodSwizzle.m; path = AtAutoCompletion/MethodSwizzle.m; sourceTree = "<group>"; };
+		84189E101AC029C50051B4D9 /* DVTCompletingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DVTCompletingTextView.h; path = AtAutoCompletion/DVTCompletingTextView.h; sourceTree = "<group>"; };
+		84189E111AC029C50051B4D9 /* DVTSourceTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DVTSourceTextView.h; path = AtAutoCompletion/DVTSourceTextView.h; sourceTree = "<group>"; };
+		84189E121AC029C50051B4D9 /* DVTTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DVTTextStorage.h; path = AtAutoCompletion/DVTTextStorage.h; sourceTree = "<group>"; };
 		84D6A3971ABFBFE200F0CD57 /* AtAutoCompletion.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtAutoCompletion.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D6A39A1ABFBFE200F0CD57 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		84D6A39C1ABFBFE200F0CD57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -31,9 +34,6 @@
 		84ECAD421AC00725007813F6 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = ../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
 		84ECAD441AC00742007813F6 /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = ../../../../Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework; sourceTree = "<group>"; };
 		84ECAD461AC0074C007813F6 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = ../../../../Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
-		84ECAD481AC007AB007813F6 /* DVTCompletingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextView.h; sourceTree = "<group>"; };
-		84ECAD4A1AC0082C007813F6 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
-		84ECAD4B1AC0082C007813F6 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
 		84ECAD4D1AC00922007813F6 /* DVTSourceTextView+AAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DVTSourceTextView+AAC.h"; sourceTree = "<group>"; };
 		84ECAD4E1AC00922007813F6 /* DVTSourceTextView+AAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DVTSourceTextView+AAC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,9 +57,9 @@
 		8436B30A1AC00566003E0381 /* DVTKit */ = {
 			isa = PBXGroup;
 			children = (
-				84ECAD481AC007AB007813F6 /* DVTCompletingTextView.h */,
-				8436B30B1AC0059E003E0381 /* DVTSourceTextView.h */,
-				84CEEAD51AC00F7400A9273C /* DVTTextStorage.h */,
+				84189E101AC029C50051B4D9 /* DVTCompletingTextView.h */,
+				84189E111AC029C50051B4D9 /* DVTSourceTextView.h */,
+				84189E121AC029C50051B4D9 /* DVTTextStorage.h */,
 			);
 			name = DVTKit;
 			sourceTree = "<group>";
@@ -119,8 +119,8 @@
 		84ECAD491AC00803007813F6 /* MethodSwizzle */ = {
 			isa = PBXGroup;
 			children = (
-				84ECAD4A1AC0082C007813F6 /* MethodSwizzle.h */,
-				84ECAD4B1AC0082C007813F6 /* MethodSwizzle.m */,
+				84189E0D1AC029B70051B4D9 /* MethodSwizzle.h */,
+				84189E0E1AC029B70051B4D9 /* MethodSwizzle.m */,
 			);
 			name = MethodSwizzle;
 			sourceTree = "<group>";
@@ -193,8 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84ECAD4F1AC00922007813F6 /* DVTSourceTextView+AAC.m in Sources */,
+				84189E0F1AC029B70051B4D9 /* MethodSwizzle.m in Sources */,
 				84D6A3A51ABFBFE200F0CD57 /* AtAutoCompletion.m in Sources */,
-				84ECAD4C1AC0082C007813F6 /* MethodSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
