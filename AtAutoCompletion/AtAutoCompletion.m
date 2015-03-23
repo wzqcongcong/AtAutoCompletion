@@ -100,7 +100,7 @@ static AtAutoCompletion *sharedPlugin;
 
 - (void)doMenuAction
 {
-    NSURL *url = [NSURL URLWithString:@"https://github.com"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/wzqcongcong/AtAutoCompletion.git"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
