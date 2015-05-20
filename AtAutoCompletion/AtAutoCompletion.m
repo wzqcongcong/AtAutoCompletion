@@ -44,10 +44,6 @@ static AtAutoCompletion *sharedPlugin;
                                                  selector:@selector(XcodeDidFinishLaunching:)
                                                      name:NSApplicationDidFinishLaunchingNotification
                                                    object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(XcodeMenuDidChange:)
-                                                     name:NSMenuDidChangeItemNotification
-                                                   object:nil];
 
         // when installing through Alcatraz the application has already launched
         if ([NSApplication sharedApplication].currentEvent) {
@@ -65,15 +61,12 @@ static AtAutoCompletion *sharedPlugin;
                                                     name:NSApplicationDidFinishLaunchingNotification
                                                   object:nil];
 
+    [self XcodeMenuDidChange:nil];
     [self swizzleMethods];
 }
 
 - (void)XcodeMenuDidChange:(NSNotification *)notification
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:NSMenuDidChangeItemNotification
-                                                  object:nil];
-
     // Create menu items, initialize UI, etc.
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
@@ -82,14 +75,8 @@ static AtAutoCompletion *sharedPlugin;
                                                          keyEquivalent:@""];
         [actionMenuItem setTarget:self];
 
-        NSInteger menuIndex = [menuItem.submenu indexOfItemWithTitle: @"Undo"];
-        if (menuIndex == -1) {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            [[menuItem submenu] addItem:actionMenuItem];
-        } else {
-            [menuItem.submenu insertItem:[NSMenuItem separatorItem] atIndex:menuIndex];
-            [menuItem.submenu insertItem:actionMenuItem atIndex:menuIndex];
-        }
+        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+        [[menuItem submenu] addItem:actionMenuItem];
     }
 }
 
