@@ -8,4 +8,4 @@
 
 #import <objc/runtime.h>
 
-void MethodSwizzle(Class cls, SEL org_sel, SEL alt_sel);
+void MethodSwizzle(Class the_class, SEL original_sel, SEL swizzled_sel);

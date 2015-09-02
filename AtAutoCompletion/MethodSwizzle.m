@@ -8,14 +8,27 @@
 
 #import "MethodSwizzle.h"
 
-void MethodSwizzle(Class cls, SEL org_sel, SEL alt_sel)
+void MethodSwizzle(Class the_class, SEL original_sel, SEL swizzled_sel)
 {
-    Method org_method = nil, alt_method = nil;
+    Method original_method = nil;
+    Method swizzled_method = nil;
 
-    org_method = class_getInstanceMethod(cls, org_sel);
-    alt_method = class_getInstanceMethod(cls, alt_sel);
+    original_method = class_getInstanceMethod(the_class, original_sel);
+    swizzled_method = class_getInstanceMethod(the_class, swizzled_sel);
 
-    if (org_method != nil && alt_method != nil) {
-        method_exchangeImplementations(org_method, alt_method);
+    if (original_method && swizzled_method) {
+        BOOL didAddMethod = class_addMethod(the_class,
+                                            original_sel,
+                                            method_getImplementation(swizzled_method),
+                                            method_getTypeEncoding(swizzled_method));
+
+        if (didAddMethod) {
+            class_replaceMethod(the_class,
+                                swizzled_sel,
+                                method_getImplementation(original_method),
+                                method_getTypeEncoding(original_method));
+        } else {
+            method_exchangeImplementations(original_method, swizzled_method);
+        }
     }
 }
