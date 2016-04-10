@@ -20,20 +20,6 @@
                ReferencedContainer = "container:AtAutoCompletion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8966AFCA173EB7BF004150C0"
-               BuildableName = "AtAutoCompletionTests.xctest"
-               BlueprintName = "AtAutoCompletionTests"
-               ReferencedContainer = "container:AtAutoCompletion.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -43,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "84D6A3961ABFBFE200F0CD57"
+            BuildableName = "AtAutoCompletion.xcplugin"
+            BlueprintName = "AtAutoCompletion"
+            ReferencedContainer = "container:AtAutoCompletion.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -80,6 +75,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "84D6A3961ABFBFE200F0CD57"
+            BuildableName = "AtAutoCompletion.xcplugin"
+            BlueprintName = "AtAutoCompletion"
+            ReferencedContainer = "container:AtAutoCompletion.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
